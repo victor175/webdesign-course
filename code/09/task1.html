@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<style>
+			html
+			{
+				background-color: rgb(15,110,231);
+			}
+			body
+			{
+				position: relative;
+				width: 1263px;
+				margin: 0;
+			}
+			div
+			{
+				position: relative;
+			}
+			object
+			{
+				position: relative;
+				left: 242px;
+			}
+
+			#main-container
+			{
+				height: 700px;
+				width: 100%;
+				top: -13px;
+			}
+			
+			ul 
+			{
+				padding: 0 15px;
+				list-style: none;
+				position: relative;
+				display: inline-table;
+			}
+			ul ul 
+			{
+				display: none;
+			}
+				ul li:hover > ul
+				{
+					display: block;
+				}
+			ul li 
+			{
+				float: left;
+				border-radius: 3px;
+				background: dodgerblue;
+				margin-right: 3px;
+			}
+				ul li a 
+				{
+					display: block; padding: 14px 30px;
+					color: white; text-decoration: none;
+					font-weight: bold; font-family: verdana;
+				}
+			ul ul 
+			{
+				padding: 0; 
+				position: absolute; 
+				top: 100%;
+			}
+				ul ul li 
+				{
+					float: none;
+					border-top: 2px solid rgba(15,110,231,1);
+					position: relative;
+					z-index:10;
+				}
+					ul ul li a 
+					{
+						padding: 10px 25px;
+						color: white;
+					}	
+						ul ul li a:hover 
+						{
+							background: royalblue;
+						}
+						ul ul ul 
+						{
+							position: absolute; left: 101%; top:0;
+						}
+			
+			#data-ticket
+			{
+				width: 100%;
+				height: 100%;
+				color: white;
+				font-family: verdana;
+				font-weight: bold;
+				background-repeat: no-repeat;
+				background-position: center;
+				top: 10px;
+			}
+					#data-ticket ul
+					{
+						background: transparent;
+						margin-right: 30px;
+						margin-left: 50px;
+					}
+					#data-ticket ul ul
+					{
+						list-style: none;
+						position: relative;
+						display: inline-table;
+						width: 420px;
+						right: 35px;
+						top: 0px;
+						left: -20px;
+					}
+					#data-ticket ul li
+					{
+						margin-right: 10px;
+						background: transparent;
+					}
+					#data-ticket ul ul li
+					{
+						float: left;
+						border: 0;
+					}
+				#data-ticket form
+				{
+					height: 700px;
+				}
+				#departure, #landing, #airline, #class
+				{
+					width: 320px;
+				}
+				#passengers
+				{
+					height: 430px;
+					width: 500px;
+				}
+				#passengers h4
+				{
+					margin-bottom: 35px;
+					text-align: center;
+				}
+				#pass-wage
+				{
+					width: 260px;
+					text-align: center;
+				}
+					#pass-wage p
+					{
+						position: relative;
+						margin-bottom: 20px;
+					}
+				#pass-pass
+				{
+					width: 140px;
+					text-align: center;
+				}
+					#pass-pass select
+					{
+						height: 18px;
+						margin-bottom: 20px;
+					}
+					#pass-pass input
+					{
+						margin-top: -5px;
+						width: 110px;
+					}
+				#pass-head
+				{
+					left: 18px;
+					position: relative;
+					text-align: center;
+				}
+				#personal
+				{
+					height: 340px;
+					width: 300px;
+				}
+					#personal input
+					{
+						width:130px;
+					}
+					#personal textarea
+					{
+						width: 260px;
+						height: 65px;
+					}
+				#form-tail
+				{
+					text-align: center;
+					height: 100px;
+				}
+				
+				#form-tail input
+				{
+					border-radius: 3px;
+					background: dodgerblue;
+					border: 0;
+					height: 60px;
+					width: 150px;
+					font-weight: bold;
+					color: white;
+					font-family: verdana;
+					font-size: 16px;
+				}
+
+		</style>
+	</head>
+	<body>
+		<div id="main-container">
+			<span id="data-container">
+				<div id="data-ticket">
+					<form method="post">
+						<ul>
+							<li>
+								<div id="departure">
+									<h3> Departure </h3>
+									From *: <input type="text" name="start1"></input> </br>
+									To *: <input type="text" name="destination1"></input> </br>
+									On *:
+									<select name="date1">
+										<option value="day" selected=""> Date </option>
+										<option value="1">01 </option>
+										<option value="2">02 </option>
+										<option value="3">03 </option>
+										<option value="4">04 </option>
+										<option value="5">05 </option>
+										<option value="6">06 </option>
+										<option value="7">07 </option>
+										<option value="8">08 </option>
+										<option value="9">09 </option>
+										<option value="10">10 </option>
+										<option value="11">11 </option>
+										<option value="12">12 </option>
+										<option value="13">13 </option>
+										<option value="14">14 </option>
+										<option value="15">15 </option>
+										<option value="16">16 </option>
+										<option value="17">17 </option>
+										<option value="18">18 </option>
+										<option value="19">19 </option>
+										<option value="20">20 </option>
+										<option value="21">21 </option>
+										<option value="22">22 </option>
+										<option value="23">23 </option>
+										<option value="24">24 </option>
+										<option value="25">25 </option>
+										<option value="26">26 </option>
+										<option value="27">27 </option>
+										<option value="28">28 </option>
+										<option value="29">29 </option>
+										<option value="30">30 </option>
+										<option value="31">31</option>
+									</select>
+									<select name="month1">
+										<option value="month1" selected=""> Month </option>
+										<option value="01">January</option>
+										<option value="02">February</option>
+										<option value="03">March</option>
+										<option value="04">April</option>
+										<option value="05">May</option>
+										<option value="06">June</option>
+										<option value="07">July</option>
+										<option value="08">August</option>
+										<option value="09">September</option>
+										<option value="10">October</option>
+										<option value="11">November</option>
+										<option value="12">December</option>
+									</select>
+									<select name="year1">
+										<option value="year1" selected=""> Year </option>
+										<option value="2013"> 2013 </option>
+										<option value="2014"> 2014 </option>
+										<option value="2015"> 2015 </option>
+									</select>
+								</div>
+								<div id="landing">
+									<h3> Arrival </h3>
+									From: <input type="text" name="start2"></input> </br>
+									To: <input type="text" name="destination2"></input> </br>
+									On:
+									<select name="date2">
+										<option value="day" selected=""> Date </option>
+										<option value="1">01 </option>
+										<option value="2">02 </option>
+										<option value="3">03 </option>
+										<option value="4">04 </option>
+										<option value="5">05 </option>
+										<option value="6">06 </option>
+										<option value="7">07 </option>
+										<option value="8">08 </option>
+										<option value="9">09 </option>
+										<option value="10">10 </option>
+										<option value="11">11 </option>
+										<option value="12">12 </option>
+										<option value="13">13 </option>
+										<option value="14">14 </option>
+										<option value="15">15 </option>
+										<option value="16">16 </option>
+										<option value="17">17 </option>
+										<option value="18">18 </option>
+										<option value="19">19 </option>
+										<option value="20">20 </option>
+										<option value="21">21 </option>
+										<option value="22">22 </option>
+										<option value="23">23 </option>
+										<option value="24">24 </option>
+										<option value="25">25 </option>
+										<option value="26">26 </option>
+										<option value="27">27 </option>
+										<option value="28">28 </option>
+										<option value="29">29 </option>
+										<option value="30">30 </option>
+										<option value="31">31</option>
+									</select>
+									<select name="month2">
+										<option value="month" selected=""> Month </option>
+										<option value="01">January</option>
+										<option value="02">February</option>
+										<option value="03">March</option>
+										<option value="04">April</option>
+										<option value="05">May</option>
+										<option value="06">June</option>
+										<option value="07">July</option>
+										<option value="08">August</option>
+										<option value="09">September</option>
+										<option value="10">October</option>
+										<option value="11">November</option>
+										<option value="12">December</option>
+									</select>
+									<select name="year2">
+										<option value="year" selected=""> Year </option>
+										<option value="2013"> 2013 </option>
+										<option value="2014"> 2014 </option>
+										<option value="2015"> 2015 </option>
+									</select>
+								</div>
+								<div id="airline">
+									<h3> Airline </h3>
+									<select name="airline">
+										<option value="No preferences" selected="">БNo preferences</option>
+										<option value="AEROFLOT">AEROFLOT </option>
+										<option value="AIR_EUROPA">AIR EUROPA </option>
+										<option value="AIR_FRANCE">AIR FRANCE </option>
+										<option value="AIR_MALTA">AIR MALTA </option>
+										<option value="ALITALIA">ALITALIA </option>
+										<option value="AUSTRIAN">AUSTRIAN </option>
+										<option value="BULGARIA_AIR">BULGARIA AIR </option>
+										<option value="BRITISH_AIRWAYS">BRITISH AIRWAYS </option>
+										<option value="CSA">CSA </option>
+										<option value="HEMUS_AIR">HEMUS AIR </option>
+										<option value="KLM">KLM </option>
+										<option value="LOT">LOT </option>
+										<option value="LUFTHANSA">LUFTHANSA </option>
+										<option value="MALEV">MALEV </option>
+										<option value="OLYMPIC_AIRWAYS">OLYMPIC AIRWAYS </option>
+										<option value="TAROM">TAROM </option>
+										<option value="TURKISH_AIRLINES">TURKISH AIRLINES </option>
+										<option value="VIAGGIO_AIR">VIAGGIO AIR </option>
+									</select>
+								</div>
+								<div id="class">
+									<h3> Class </h3>
+									<select name="class">
+										<option value="the-lowest" selected="">The lowest</option>
+										<option value="flexible">Flexible</option>
+										<option value="business">Business</option>
+										<option value="with-open-return">With open return</option>
+										<option value="group">Group</option>
+									</select>
+								</div>
+							</li>
+							<li>
+								<div id="passengers">
+									<h3 id="pass-head"> Passenger Information</h3>
+									<ul>
+										<li>
+											<div id="pass-wage">
+												<h4> Wage rate </h4>
+												<p> Adult </p>
+												<p> Student </p>
+												<p> Youth (25 years) </p>
+												<p> Children (12 years) </p>
+												<p> Babies (2 years) </p> 
+												<p> Senior (60 years) </p>
+												<p> Group (over 6 passengers) </p> 
+											</div>
+										</li>
+										<li>
+											<div id="pass-pass">
+												<h4> Passengers </h4> 
+												<select name="pass1">
+													<option selected="" name="0"> - </option>
+													<option name="1">1 </option>
+													<option name="2">2 </option>
+													<option name="3">3 </option>
+													<option name="4">4 </option>
+													<option name="5">5 </option>
+													<option name="6">6 </option>
+													<option name="7">7 </option>
+													<option name="8">8 </option>
+													<option name="9">9 </option>
+													<option name="10">10 </option>
+												</select> </br>
+												
+												<select name="pass2">
+													<option selected="" name="0"> - </option>
+													<option name="1">1 </option>
+													<option name="2">2 </option>
+													<option name="3">3 </option>
+													<option name="4">4 </option>
+													<option name="5">5 </option>
+													<option name="6">6 </option>
+													<option name="7">7 </option>
+													<option name="8">8 </option>
+													<option name="9">9 </option>
+													<option name="10">10 </option>
+												</select> </br>
+				 
+												<select name="pass3">
+													<option selected="" name="0"> - </option>
+													<option name="1">1 </option>
+													<option name="2">2 </option>
+													<option name="3">3 </option>
+													<option name="4">4 </option>
+													<option name="5">5 </option>
+													<option name="6">6 </option>
+													<option name="7">7 </option>
+													<option name="8">8 </option>
+													<option name="9">9 </option>
+													<option name="10">10 </option>
+												</select> </br>
+				 
+												<select name="pass4">
+													<option selected="" name="0"> - </option>
+													<option name="1">1 </option>
+													<option name="2">2 </option>
+													<option name="3">3 </option>
+													<option name="4">4 </option>
+													<option name="5">5 </option>
+													<option name="6">6 </option>
+													<option name="7">7 </option>
+													<option name="8">8 </option>
+													<option name="9">9 </option>
+													<option name="10">10 </option>
+												</select> </br>
+				 
+												<select name="pass5">
+													<option selected="" name="0"> - </option>
+													<option name="1">1 </option>
+													<option name="2">2 </option>
+													<option name="3">3 </option>
+													<option name="4">4 </option>
+													<option name="5">5 </option>
+													<option name="6">6 </option>
+													<option name="7">7 </option>
+													<option name="8">8 </option>
+													<option name="9">9 </option>
+													<option name="10">10 </option>
+												</select> </br>
+				 
+												<select name="pass6" id="pass6">
+													<option selected="" name="0"> - </option>
+													<option name="1">1 </option>
+													<option name="2">2 </option>
+													<option name="3">3 </option>
+													<option name="4">4 </option>
+													<option name="5">5 </option>
+													<option name="6">6 </option>
+													<option name="7">7 </option>
+													<option name="8">8 </option>
+													<option name="9">9 </option>
+													<option name="10">10 </option>
+												</select> </br>
+				 
+												<input type="text" name="group" value="-"> </input>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div id="personal">
+									<h3> To keep in touch with you: </h3> </br>
+									Name *: <input type="text" name="name"> </input> </br>
+									Phone *: <input type="text" name="phone"> </input> </br>
+									Email *: <input type="text" name="email"> </input> </br> </br>
+									<h3> Additional infromation </h3> 
+									<textarea name="add-info" value="-"> </textarea>
+								</div>
+							</li>
+						</ul>
+						<div id="form-tail">
+							<p>
+								All fields marked with * are necessary!
+							</p>
+							<input type="submit" value="Send"> </input>
+						</div>
+					</form>
+				 </div>
+			</span>
+		</div>
+	</body>
+</html>
